@@ -7,11 +7,19 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400..800&amp;display=swap">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="brand.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <header><a class="brand" href="index.html" aria-label="صَرح، الرئيسية"><strong>صَرح</strong><small lang="en" dir="ltr">SARH</small></a><nav aria-label="التنقّل الرئيسي"><a href="index.html">الرئيسية</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="صَرح، الرئيسية"><strong>صَرح</strong><small lang="en" dir="ltr">SARH</small></a>
+    <button class="menu-toggle" type="button" aria-label="قائمة التنقّل" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="التنقّل الرئيسي"><a href="index.html">الرئيسية</a>
 <a href="products.html" aria-current="page">منتجاتنا وخدماتنا</a>
-<a href="contact.html">تواصل معنا</a></nav></header>
+<a href="contact.html">تواصل معنا</a></nav>
+    <a class="header-order" href="https://wa.me/966531148375">اطلب عبر واتساب</a>
+  </header>
   <main>
   <section class="wrap" aria-labelledby="catalog-title">
   <h1 id="catalog-title">منتجاتنا وخدماتنا</h1>

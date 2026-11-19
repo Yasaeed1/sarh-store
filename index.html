@@ -7,43 +7,78 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400..800&amp;display=swap">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="brand.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <header><a class="brand" href="index.html" aria-label="صَرح، الرئيسية"><strong>صَرح</strong><small lang="en" dir="ltr">SARH</small></a><nav aria-label="التنقّل الرئيسي"><a href="index.html" aria-current="page">الرئيسية</a>
+  <div class="home-shell">
+    <div class="sky-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <header class="site-header">
+    <a class="brand" href="index.html" aria-label="صَرح، الرئيسية"><strong>صَرح</strong><small lang="en" dir="ltr">SARH</small></a>
+    <button class="menu-toggle" type="button" aria-label="قائمة التنقّل" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" aria-label="التنقّل الرئيسي"><a href="index.html" aria-current="page">الرئيسية</a>
 <a href="products.html">منتجاتنا وخدماتنا</a>
-<a href="contact.html">تواصل معنا</a></nav></header>
-  <main>
-  <section class="hero">
-  <div class="copy">
-    <h1>معالم يمنية<br><em>بحجم الهدية</em></h1>
-    <p>من أبواب صنعاء إلى قصور حضرموت، اكتشف مجسّمات وقطعًا تروي حكايات من التراث اليمني.</p>
-    <a class="button" href="products.html">استعرض المجموعة</a>
-  </div>
-  <div class="hero-image"><img src="assets/images/bab-al-yemen.webp" alt="مجسّم باب اليمن" decoding="async"></div>
-</section>
-<section class="wrap" aria-labelledby="collection">
-  <div class="sectionhead"><h2 id="collection">المجموعة</h2><a class="line" href="products.html">جميع القطع</a></div>
-  <div class="grid"><article>
+<a href="contact.html">تواصل معنا</a></nav>
+    <a class="header-order" href="https://wa.me/966531148375">اطلب عبر واتساب</a>
+  </header>
+
+    <main>
+      <section class="sky-hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <h1 id="hero-title"><span data-words>معالم يمنية</span><em data-words>بحجم الهدية</em></h1>
+          <div class="hero-intro">
+            <p data-words>من أبواب صنعاء إلى قصور حضرموت، مجسّمات تروي حكايات من التراث اليمني.</p>
+            <a class="explore" href="#collection" data-words>استعرض المجموعة</a>
+          </div>
+        </div>
+        <div class="hero-showcase">
+          <div class="hero-feature">
+            <img src="assets/images/bab-al-yemen.webp" width="1440" height="1075" alt="مجسّم باب اليمن" fetchpriority="high" decoding="async">
+          </div>
+          <aside class="hero-preview" aria-label="معاينة المعالم">
+            <div class="preview-frame">
+          <a href="products.html#dar-al-hajar" data-slide><img src="assets/images/dar-al-hajar.webp" alt="دار الحجر" decoding="async"></a>
+          <a href="products.html#seiyun-palace" data-slide hidden><img src="assets/images/seiyun-palace.webp" alt="قصر سيئون" decoding="async" loading="lazy"></a>
+          <a href="products.html#al-ghuwaizi-fort" data-slide hidden><img src="assets/images/al-ghuwaizi-fort.webp" alt="حصن الغويزي" decoding="async" loading="lazy"></a>
+          <a href="products.html#al-mihdar-minaret" data-slide hidden><img src="assets/images/al-mihdar-minaret.webp" alt="منارة مسجد المحضار" decoding="async" loading="lazy"></a>
+            </div>
+            <div class="preview-controls" hidden>
+              <div class="preview-steps" role="group" aria-label="اختيار المعلم">
+            <button type="button" data-slide-to="0" aria-label="دار الحجر" aria-pressed="true"></button>
+            <button type="button" data-slide-to="1" aria-label="قصر سيئون" aria-pressed="false"></button>
+            <button type="button" data-slide-to="2" aria-label="حصن الغويزي" aria-pressed="false"></button>
+            <button type="button" data-slide-to="3" aria-label="منارة مسجد المحضار" aria-pressed="false"></button>
+              </div>
+              <button class="preview-pause" type="button" aria-label="إيقاف العرض التلقائي">Ⅱ</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="wrap collection" data-reveal aria-labelledby="collection">
+  <div class="sectionhead"><h2 id="collection" data-words>مجموعة صَرح</h2><a class="line" href="products.html">جميع القطع</a></div>
+  <div class="grid collection-grid"><article data-reveal-card>
           <a class="product-image" href="products.html#bab-al-yemen" aria-label="عرض مجسّم باب اليمن"><img src="assets/images/bab-al-yemen.webp" alt="باب اليمن" loading="lazy" decoding="async"></a>
           <div class="product-copy"><p class="place">صنعاء القديمة، أمانة العاصمة</p><h3><a href="products.html#bab-al-yemen">مجسّم باب اليمن</a></h3></div>
-        </article><article>
+        </article><article data-reveal-card>
           <a class="product-image" href="products.html#dar-al-hajar" aria-label="عرض مجسّم دار الحجر"><img src="assets/images/dar-al-hajar.webp" alt="دار الحجر" loading="lazy" decoding="async"></a>
           <div class="product-copy"><p class="place">وادي ظهر، محافظة صنعاء</p><h3><a href="products.html#dar-al-hajar">مجسّم دار الحجر</a></h3></div>
-        </article><article>
+        </article><article data-reveal-card>
           <a class="product-image" href="products.html#seiyun-palace" aria-label="عرض مجسّم قصر سيئون"><img src="assets/images/seiyun-palace.webp" alt="قصر سيئون" loading="lazy" decoding="async"></a>
           <div class="product-copy"><p class="place">سيئون، محافظة حضرموت</p><h3><a href="products.html#seiyun-palace">مجسّم قصر سيئون</a></h3></div>
-        </article><article>
+        </article><article data-reveal-card>
           <a class="product-image" href="products.html#al-ghuwaizi-fort" aria-label="عرض مجسّم حصن الغويزي"><img src="assets/images/al-ghuwaizi-fort.webp" alt="حصن الغويزي" loading="lazy" decoding="async"></a>
           <div class="product-copy"><p class="place">المكلا، محافظة حضرموت</p><h3><a href="products.html#al-ghuwaizi-fort">مجسّم حصن الغويزي</a></h3></div>
-        </article><article>
+        </article><article data-reveal-card>
           <a class="product-image" href="products.html#al-mihdar-minaret" aria-label="عرض مجسّم منارة مسجد المحضار"><img src="assets/images/al-mihdar-minaret.webp" alt="منارة مسجد المحضار" loading="lazy" decoding="async"></a>
           <div class="product-copy"><p class="place">تريم، محافظة حضرموت</p><h3><a href="products.html#al-mihdar-minaret">مجسّم منارة مسجد المحضار</a></h3></div>
-        </article><article>
+        </article><article data-reveal-card>
           <a class="product-image" href="products.html#yemeni-jambiya" aria-label="عرض جنبية"><img src="assets/images/yemeni-jambiya.webp" alt="جنبية" loading="lazy" decoding="async"></a>
           <div class="product-copy"><p class="place">تراث يمني، ومن أشهر أسواقها صنعاء القديمة</p><h3><a href="products.html#yemeni-jambiya">جنبية</a></h3></div>
         </article></div>
 </section>
-  </main>
-  <footer><a class="brand" href="index.html" aria-label="صَرح، الرئيسية"><strong>صَرح</strong><small lang="en" dir="ltr">SARH</small></a><span>الرياض، المملكة العربية السعودية</span><a href="contact.html">تواصل معنا</a></footer>
+    </main>
+  </div>
+<footer><a class="brand" href="index.html" aria-label="صَرح، الرئيسية"><strong>صَرح</strong><small lang="en" dir="ltr">SARH</small></a><span>الرياض، المملكة العربية السعودية</span><a href="contact.html">تواصل معنا</a></footer>
 </body>
 </html>
