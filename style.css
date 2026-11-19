@@ -1,48 +1,85 @@
-:root {--ink:#352821;--clay:#853f2d;--paper:#faf7f1;--rule:#d8cabc}
-* {box-sizing:border-box}
-body {margin:0;background:var(--paper);color:var(--ink);font:1.05rem/1.85 "Thmanyah Sans",Tahoma,Arial,sans-serif}
-a {color:inherit;text-decoration:none}
-a:focus-visible {outline:3px solid #408d9e;outline-offset:4px}
-header,footer,.sectionhead {display:flex;align-items:center;justify-content:space-between;gap:1rem}
-header,footer {padding:1rem 6vw}
-header {border-bottom:1px solid var(--rule)}
-.brand {display:inline-flex;align-items:center;gap:.7rem;color:var(--clay)}
-.brand strong {font: bold 2.7rem/1.1 "Thmanyah Serif Display","Thmanyah Sans","Traditional Arabic",Georgia,serif}
-.brand small {border-inline-start:1px solid var(--rule);padding-inline-start:.7rem;letter-spacing:.18em;font:normal .84rem "Thmanyah Sans",Georgia,serif;letter-spacing:.17em}
-nav {display:flex;gap:clamp(.8rem,3vw,3rem);font-size:.96rem}
-nav a {padding:.4rem 0;border-bottom:2px solid transparent}
-nav a[aria-current],nav a:hover {color:var(--clay);border-color:var(--clay)}
-.hero {display:grid;grid-template-columns:44% 56%;background:#542f25;color:#fff6e7}
-.hero>img {width:100%;height:100%;min-height:28rem;object-fit:cover}
-.copy {align-self:center;padding:clamp(2rem,5vw,5.5rem) 6vw}
-.motif {font-size:1.25rem;color:#e2b68d}
-h1,h2,h3 {font-family:"Thmanyah Serif Display","Thmanyah Sans","Traditional Arabic",Georgia,serif;margin:0;line-height:1.35}
-h1 {font-size:clamp(3rem,5.1vw,5.8rem)}
-h1 em {color:#efc79d;font-style:normal}
-h2 {font-size:clamp(2.15rem,3.2vw,3.4rem)}
-h3 {font-size:1.95rem}
-p {margin:.8rem 0 1.4rem}
-.copy p {max-width:32rem}
-.button {display:inline-block;background:#f6e5ca;color:#492c22;padding:.65rem 1.5rem;font-weight:bold}
-.button:hover {background:white}
-.wrap {max-width:90rem;margin:auto;padding:3rem 6vw}
-.sectionhead {margin-bottom:1.4rem}
-.line {color:var(--clay);text-decoration:underline;text-underline-offset:.35rem}
-.grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}
-article img {width:100%;aspect-ratio:1.5;object-fit:cover;display:block;margin-bottom:.7rem}
-article small {color:var(--clay)}
-.services {border-top:1px solid var(--rule)}
-dl {margin:1.3rem 0}
-dt {font-weight:bold}
-dd {margin:0 0 1rem}
-footer {border-top:1px solid var(--rule);font-size:.92rem}
-@media(max-width:700px){
- header {flex-wrap:wrap;justify-content:center;gap:.5rem 2rem}
- nav {gap:1rem}
- .hero {grid-template-columns:1fr}
- .hero>img {min-height:0;height:auto;aspect-ratio:1.6}
- .copy {padding:2rem 6vw}
- .grid {grid-template-columns:1fr;gap:2rem}
- .wrap {padding:2rem 6vw}
- footer {flex-wrap:wrap}
+:root {
+  --ink: #352821;
+  --clay: #853f2d;
+  --paper: #faf7f1;
+  --rule: #d8cabc;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1rem/1.85 "Thmanyah Sans", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid #408d9e; outline-offset: 4px; }
+header, footer, .sectionhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem 1.5rem;
+}
+header, footer { padding: 1rem 6vw; }
+header { border-bottom: 1px solid var(--rule); }
+.brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--clay); }
+.brand strong { font-size: 2.7rem; line-height: 1.1; }
+.brand small {
+  border-inline-start: 1px solid var(--rule);
+  padding-inline-start: .7rem;
+  font-size: .84rem;
+  letter-spacing: .17em;
+}
+nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem clamp(.8rem, 3vw, 3rem); font-size: .96rem; }
+nav a { padding: .4rem 0; border-bottom: 2px solid transparent; }
+nav a[aria-current], nav a:hover { color: var(--clay); border-color: var(--clay); }
+.hero { display: grid; grid-template-columns: 44% 56%; background: #542f25; color: #fff6e7; }
+.hero-image {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-width: 0;
+  background: #fff;
+}
+.hero-image img { display: block; width: 100%; max-height: 33rem; object-fit: contain; }
+.copy { align-self: center; padding: clamp(2rem, 5vw, 5.5rem) 6vw; }
+h1, h2, h3 { margin: 0; line-height: 1.45; }
+h1 { font-size: clamp(2.25rem, 4.5vw, 4.65rem); font-weight: 800; }
+h1 em { color: #efc79d; font-style: normal; }
+h2 { font-size: clamp(1.6rem, 2.5vw, 2.55rem); }
+h3 { font-size: clamp(1.2rem, 1.7vw, 1.6rem); }
+p { margin: .65rem 0 1.2rem; }
+.copy p { max-width: 32rem; }
+.button { display: inline-block; background: #f6e5ca; color: #492c22; padding: .65rem 1.25rem; font-weight: 700; }
+.button:hover { background: white; }
+.wrap { max-width: 90rem; margin: auto; padding: 3rem 6vw; }
+.sectionhead, .catalog-heading { margin-bottom: 1rem; }
+.grid + .catalog-heading { margin-top: 2.75rem; }
+.line { color: var(--clay); text-decoration: underline; text-underline-offset: .24em; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); }
+article { display: flex; flex-direction: column; min-width: 0; background: #fff; border: 1px solid var(--rule); }
+article:target { outline: 2px solid var(--clay); outline-offset: 3px; }
+.product-image { aspect-ratio: 4 / 3; display: block; min-width: 0; background: #fff; }
+.product-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.product-copy { padding: .95rem 1.1rem 1.15rem; border-top: 1px solid var(--rule); }
+.place { margin: 0 0 .25rem; color: var(--clay); font-size: .92rem; }
+.exhibit { color: var(--clay); font-size: .95rem; }
+.services { border-top: 1px solid var(--rule); }
+dl { margin: 1.3rem 0; }
+dt { font-weight: 700; }
+dd { margin: 0 0 1rem; }
+footer { border-top: 1px solid var(--rule); font-size: .92rem; }
+
+@media (max-width: 850px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  header { justify-content: center; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-image img { max-height: 23rem; }
+  .copy, .wrap { padding: 2rem 6vw; }
+}
+@media (max-width: 520px) {
+  .grid { grid-template-columns: 1fr; }
 }
