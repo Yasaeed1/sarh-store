@@ -1,14 +1,14 @@
 :root {--ink:#352821;--clay:#853f2d;--paper:#faf7f1;--rule:#d8cabc}
 * {box-sizing:border-box}
-body {margin:0;background:var(--paper);color:var(--ink);font:1.05rem/1.85 Tahoma,Arial,sans-serif}
+body {margin:0;background:var(--paper);color:var(--ink);font:1.05rem/1.85 "Thmanyah Sans",Tahoma,Arial,sans-serif}
 a {color:inherit;text-decoration:none}
 a:focus-visible {outline:3px solid #408d9e;outline-offset:4px}
 header,footer,.sectionhead {display:flex;align-items:center;justify-content:space-between;gap:1rem}
 header,footer {padding:1rem 6vw}
 header {border-bottom:1px solid var(--rule)}
 .brand {display:inline-flex;align-items:center;gap:.7rem;color:var(--clay)}
-.brand strong {font: bold 2.7rem/1.1 'Traditional Arabic',Georgia,serif}
-.brand small {border-inline-start:1px solid var(--rule);padding-inline-start:.7rem;letter-spacing:.18em;font:normal .84rem Georgia,serif;letter-spacing:.17em}
+.brand strong {font: bold 2.7rem/1.1 "Thmanyah Serif Display","Thmanyah Sans","Traditional Arabic",Georgia,serif}
+.brand small {border-inline-start:1px solid var(--rule);padding-inline-start:.7rem;letter-spacing:.18em;font:normal .84rem "Thmanyah Sans",Georgia,serif;letter-spacing:.17em}
 nav {display:flex;gap:clamp(.8rem,3vw,3rem);font-size:.96rem}
 nav a {padding:.4rem 0;border-bottom:2px solid transparent}
 nav a[aria-current],nav a:hover {color:var(--clay);border-color:var(--clay)}
@@ -16,7 +16,7 @@ nav a[aria-current],nav a:hover {color:var(--clay);border-color:var(--clay)}
 .hero>img {width:100%;height:100%;min-height:28rem;object-fit:cover}
 .copy {align-self:center;padding:clamp(2rem,5vw,5.5rem) 6vw}
 .motif {font-size:1.25rem;color:#e2b68d}
-h1,h2,h3 {font-family:'Traditional Arabic',Georgia,serif;margin:0;line-height:1.35}
+h1,h2,h3 {font-family:"Thmanyah Serif Display","Thmanyah Sans","Traditional Arabic",Georgia,serif;margin:0;line-height:1.35}
 h1 {font-size:clamp(3rem,5.1vw,5.8rem)}
 h1 em {color:#efc79d;font-style:normal}
 h2 {font-size:clamp(2.15rem,3.2vw,3.4rem)}
